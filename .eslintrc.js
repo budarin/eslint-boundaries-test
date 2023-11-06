@@ -129,6 +129,10 @@ module.exports = {
                         allow: ['utils'],
                     },
                     {
+                        from: 'domain',
+                        allow: ['shared'],
+                    },
+                    {
                         from: 'contracts',
                         allow: [['domain', { category: 'core' }]],
                         importKind: 'type',
