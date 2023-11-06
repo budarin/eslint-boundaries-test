@@ -53,11 +53,12 @@ module.exports = {
                 pattern: 'src/index.ts',
                 mode: 'full',
             },
-            // core --------------------------
+
             {
                 type: 'core',
                 pattern: 'src/core/*',
             },
+
             {
                 type: 'contracts',
                 // src/core/domain/
@@ -65,7 +66,6 @@ module.exports = {
                 capture: ['category'],
             },
 
-            // domain ------------------------
             {
                 type: 'domain',
                 // src/core/domain/
@@ -84,7 +84,6 @@ module.exports = {
                 pattern: 'src/*/domain/store/*',
                 capture: ['category', 'subcategory'],
             },
-            // -------------------------------
 
             {
                 type: 'use_cases',
@@ -92,7 +91,6 @@ module.exports = {
                 pattern: 'src/*/use_cases/*',
                 capture: ['category'],
             },
-            // -------------------------------
 
             {
                 type: 'services',
