@@ -1,0 +1,33 @@
+{
+    "name": "eslint-boundaries-test",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/budarin/eslint-boundaries-test.git",
+    "author": "vadim_budarin <budarin-vv@yandex.ru>",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/eslint-plugin": "^7.22.10",
+        "@types/node": "^20.8.10",
+        "@types/react": "^18.2.35",
+        "@types/react-dom": "^18.2.14",
+        "@typescript-eslint/eslint-plugin": "^6.9.1",
+        "@typescript-eslint/parser": "^6.10.0",
+        "eslint": "^8.53.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-import-resolver-typescript": "^3.6.1",
+        "eslint-plugin-boundaries": "^3.4.1",
+        "eslint-plugin-import": "^2.29.0",
+        "eslint-plugin-jest": "^27.6.0",
+        "eslint-plugin-jest-dom": "^5.1.0",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "eslint-plugin-optimize-regex": "^1.2.1",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-sonarjs": "^0.23.0",
+        "eslint-plugin-testing-library": "^6.0.1",
+        "typescript": "^5.1.6"
+    },
+    "scripts": {
+        "lint": "sh ./tools/es-lint.sh"
+    }
+}
