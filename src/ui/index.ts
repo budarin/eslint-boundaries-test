@@ -7,7 +7,7 @@ import { createEntity } from 'entities/index.ts';
 export let ui: Contract;
 
 export function renderUI() {
+    shared();
     createEntity();
     use_case();
-    console.log(shared);
 }

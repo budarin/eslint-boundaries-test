@@ -1,1 +1,3 @@
-export const shared = 'shared';
+export function shared() {
+    console.log('shared method is called');
+}

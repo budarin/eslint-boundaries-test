@@ -1,3 +1,5 @@
 import { shared } from 'shared/index.ts';
 
-console.log(shared);
+export function setupDomain() {
+    shared();
+}

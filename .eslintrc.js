@@ -54,6 +54,7 @@ module.exports = {
             {
                 type: 'core',
                 pattern: 'src/core/*',
+                mode: 'file',
             },
 
             {
@@ -61,6 +62,7 @@ module.exports = {
                 // src/core/domain/
                 pattern: 'src/*/contracts/*',
                 capture: ['category'],
+                mode: 'file',
             },
 
             {
@@ -68,18 +70,21 @@ module.exports = {
                 // src/core/domain/
                 pattern: 'src/*/domain/*',
                 capture: ['category'],
+                mode: 'file',
             },
             {
                 type: 'entities',
                 // src/core/domain/entities
-                pattern: 'src/*/*/entities/*',
-                capture: ['category', 'subcategory'],
+                pattern: 'src/*/domain/entities/*',
+                capture: ['category'],
+                mode: 'file',
             },
             {
                 type: 'store',
                 // src/core/domain/store
-                pattern: 'src/*/*/store/*',
-                capture: ['category', 'subcategory'],
+                pattern: 'src/*/domain/store/*',
+                capture: ['category'],
+                mode: 'file',
             },
 
             {
@@ -87,23 +92,28 @@ module.exports = {
                 // src/core/use_cases
                 pattern: 'src/*/use_cases/*',
                 capture: ['category'],
+                mode: 'file',
             },
 
             {
                 type: 'services',
                 pattern: 'src/services/*',
+                mode: 'file',
             },
             {
                 type: 'ui',
                 pattern: 'src/ui/*',
+                mode: 'file',
             },
             {
                 type: 'shared',
                 pattern: 'src/shared/*',
+                mode: 'file',
             },
             {
                 type: 'utils',
                 pattern: 'src/utils/*',
+                mode: 'file',
             },
         ],
     },
@@ -120,6 +130,8 @@ module.exports = {
             2,
             {
                 default: 'disallow',
+                message:
+                    'Модули из "${file.type}" не могут импортировать модули из "${dependency.type}" или такие типы модулей (types или code)',
                 rules: [
                     {
                         from: 'root',
@@ -131,42 +143,30 @@ module.exports = {
                     },
                     {
                         from: 'contracts',
-                        allow: [['domain', { category: 'core' }]],
+                        allow: ['domain', 'entities', 'store', 'use_cases', 'services'],
                         importKind: 'type',
+                        message:
+                            'Контраты могут импортировать исключительно типы из доменов, юзкейсов и сервисов',
                     },
                     {
-                        from: [['entities', { category: 'core' }]],
+                        from: 'entities',
                         allow: ['shared'],
                     },
                     {
                         from: 'store',
-                        allow: [
-                            ['contracts', { category: 'core' }],
-                            ['entities', { category: 'core' }],
-                            'shared',
-                        ],
+                        allow: ['contracts', 'entities', 'shared'],
                     },
                     {
                         from: 'ui',
-                        allow: [
-                            ['contracts', { category: 'core' }],
-                            ['entities', { category: 'core' }],
-                            ['use_cases', { category: 'core' }],
-                            'shared',
-                        ],
+                        allow: ['contracts', 'entities', 'use_cases', 'shared'],
                     },
                     {
                         from: 'services',
-                        allow: [['contracts', { category: 'core' }], 'shared'],
+                        allow: ['contracts', 'shared'],
                     },
                     {
                         from: 'use_cases',
-                        allow: [
-                            ['contracts', { category: 'core' }],
-                            ['domain', { category: 'core' }],
-                            'services',
-                            'shared',
-                        ],
+                        allow: ['contracts', 'entities', 'store', 'services', 'shared'],
                     },
                     {
                         from: 'utils',
