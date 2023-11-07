@@ -72,13 +72,13 @@ module.exports = {
             {
                 type: 'entities',
                 // src/core/domain/entities
-                pattern: 'src/*/domain/entities/*',
+                pattern: 'src/*/*/entities/*',
                 capture: ['category', 'subcategory'],
             },
             {
                 type: 'store',
                 // src/core/domain/store
-                pattern: 'src/*/domain/store/*',
+                pattern: 'src/*/*/store/*',
                 capture: ['category', 'subcategory'],
             },
 
