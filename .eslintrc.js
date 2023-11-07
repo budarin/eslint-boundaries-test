@@ -59,60 +59,44 @@ module.exports = {
 
             {
                 type: 'contracts',
-                // src/core/domain/
-                pattern: 'src/*/contracts/*',
-                capture: ['category'],
+                pattern: 'src/core/contracts/*',
                 mode: 'file',
             },
 
             {
                 type: 'domain',
-                // src/core/domain/
-                pattern: 'src/*/domain/*',
-                capture: ['category'],
+                pattern: 'src/core/domain/*',
                 mode: 'file',
             },
 
             {
                 type: 'entities',
-                // src/core/domain/entities
-                pattern: 'src/*/domain/entities/*',
-                capture: ['category'],
+                pattern: 'src/core/domain/entities/*',
                 mode: 'file',
             },
             {
                 type: 'entities',
-                // src/core/domain/entities
-                pattern: 'src/*/domain/entities/*',
-                capture: ['category'],
+                pattern: 'src/core/domain/entities/*',
             },
 
             {
                 type: 'store',
-                // src/core/domain/store
-                pattern: 'src/*/domain/store/*',
-                capture: ['category'],
+                pattern: 'src/core/domain/store/*',
                 mode: 'file',
             },
             {
                 type: 'store',
-                // src/core/domain/store
-                pattern: 'src/*/domain/store/*',
-                capture: ['category'],
+                pattern: 'src/core/domain/store/*',
             },
 
             {
                 type: 'use_cases',
-                // src/core/use_cases
-                pattern: 'src/*/use_cases/*',
-                capture: ['category'],
+                pattern: 'src/core/use_cases/*',
                 mode: 'file',
             },
             {
                 type: 'use_cases',
-                // src/core/use_cases
-                pattern: 'src/*/use_cases/*',
-                capture: ['category'],
+                pattern: 'src/core/use_cases/*',
             },
 
             {
