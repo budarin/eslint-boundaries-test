@@ -87,6 +87,7 @@ module.exports = {
             {
                 type: 'store',
                 pattern: 'src/core/domain/store/*',
+                mode: 'folder',
             },
 
             {
@@ -97,6 +98,7 @@ module.exports = {
             {
                 type: 'use_cases',
                 pattern: 'src/core/use_cases/*',
+                mode: 'folder',
             },
 
             {
@@ -107,6 +109,7 @@ module.exports = {
             {
                 type: 'services',
                 pattern: 'src/services/*',
+                mode: 'folder',
             },
 
             {
@@ -117,6 +120,7 @@ module.exports = {
             {
                 type: 'ui',
                 pattern: 'src/ui/*',
+                mode: 'folder',
             },
 
             {
@@ -127,6 +131,7 @@ module.exports = {
             {
                 type: 'shared',
                 pattern: 'src/shared/*',
+                mode: 'folder',
             },
 
             {
@@ -137,6 +142,7 @@ module.exports = {
             {
                 type: 'utils',
                 pattern: 'src/utils/*',
+                mode: 'folder',
             },
         ],
     },
