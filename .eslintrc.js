@@ -72,12 +72,21 @@ module.exports = {
                 capture: ['category'],
                 mode: 'file',
             },
+
+            {
+                type: 'entities',
+                // src/core/domain/entities
+                pattern: 'src/*/domain/entities/*',
+                capture: ['category'],
+                mode: 'file',
+            },
             {
                 type: 'entities',
                 // src/core/domain/entities
                 pattern: 'src/*/domain/entities/*',
                 capture: ['category'],
             },
+
             {
                 type: 'store',
                 // src/core/domain/store
@@ -99,6 +108,12 @@ module.exports = {
                 capture: ['category'],
                 mode: 'file',
             },
+            {
+                type: 'use_cases',
+                // src/core/use_cases
+                pattern: 'src/*/use_cases/*',
+                capture: ['category'],
+            },
 
             {
                 type: 'services',
@@ -106,19 +121,38 @@ module.exports = {
                 mode: 'file',
             },
             {
+                type: 'services',
+                pattern: 'src/services/*',
+            },
+
+            {
                 type: 'ui',
                 pattern: 'src/ui/*',
                 mode: 'file',
             },
+            {
+                type: 'ui',
+                pattern: 'src/ui/*',
+            },
+
             {
                 type: 'shared',
                 pattern: 'src/shared/*',
                 mode: 'file',
             },
             {
+                type: 'shared',
+                pattern: 'src/shared/*',
+            },
+
+            {
                 type: 'utils',
                 pattern: 'src/utils/*',
                 mode: 'file',
+            },
+            {
+                type: 'utils',
+                pattern: 'src/utils/*',
             },
         ],
     },
