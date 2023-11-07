@@ -77,7 +77,6 @@ module.exports = {
                 // src/core/domain/entities
                 pattern: 'src/*/domain/entities/*',
                 capture: ['category'],
-                mode: 'file',
             },
             {
                 type: 'store',
@@ -85,6 +84,12 @@ module.exports = {
                 pattern: 'src/*/domain/store/*',
                 capture: ['category'],
                 mode: 'file',
+            },
+            {
+                type: 'store',
+                // src/core/domain/store
+                pattern: 'src/*/domain/store/*',
+                capture: ['category'],
             },
 
             {
